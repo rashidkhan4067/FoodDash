@@ -1,0 +1,237 @@
+/* ============================================
+   APP DOWNLOAD SECTION
+   ============================================ */
+
+.app-download-section {
+    background: #CDE6EE;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.app-download-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    justify-content: space-between;
+    height: 100%;
+    min-height: 550px;
+    /* Taller section to accommodate big phone */
+}
+
+/* CONTENT LEFT */
+.app-content {
+    flex: 1;
+    z-index: 10;
+    padding: 60px 0;
+    max-width: 550px;
+    min-width: 300px;
+}
+
+.app-headline {
+    font-size: 56px;
+    font-weight: 900;
+    color: #1a1a1a;
+    line-height: 1.1;
+    margin: 0 0 16px 0;
+    letter-spacing: -1px;
+}
+
+.app-subheadline {
+    font-size: 20px;
+    font-weight: 700;
+    color: #445460;
+    margin: 0 0 32px 0;
+    line-height: 1.5;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Fallback buttons */
+/* Fallback buttons */
+.store-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 180px;
+    /* Fixed width for identical sizing */
+    height: 60px;
+    /* Fixed height */
+    text-decoration: none;
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect total width */
+}
+
+.store-btn:hover {
+    background: #252525;
+    /* Slightly lighter black */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.btn-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.1;
+}
+
+.small-txt {
+    font-size: 10px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.big-txt {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* VISUAL RIGHT */
+.app-visual {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    position: relative;
+    align-self: flex-end;
+}
+
+.phone-mockup {
+    width: 100%;
+    /* INCREASED DESKTOP SIZE */
+    max-width: 680px;
+    display: block;
+    filter: drop-shadow(-10px 10px 30px rgba(0, 0, 0, 0.15));
+    /* Pull bottom to align flush with section edge or slightly cut off */
+    margin-bottom: -40px;
+    transform: translateY(20px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+
+    /* TABLET / MOBILE SHARED LAYOUT */
+    .app-download-container {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        text-align: left;
+        padding: 20px 24px 0;
+        min-height: auto;
+        overflow: visible;
+    }
+
+    .app-content {
+        padding: 0 0 40px 0;
+        margin-bottom: 0;
+        align-items: flex-start;
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .app-headline {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+
+    .app-subheadline {
+        font-size: 15px;
+        margin-bottom: 24px;
+        max-width: 90%;
+    }
+
+    .app-buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: auto;
+        /* Allow buttons to size themselves */
+        align-items: flex-start;
+    }
+
+    /* COMPACT MOBILE BUTTONS */
+    .store-btn {
+        width: auto;
+        max-width: 140px;
+        min-width: 120px;
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .btn-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .big-txt {
+        font-size: 13px;
+    }
+
+    .small-txt {
+        font-size: 9px;
+    }
+
+    .app-visual {
+        flex: 1;
+        min-width: 140px;
+        position: relative;
+        height: 100%;
+    }
+
+    .phone-mockup {
+        position: absolute;
+        bottom: -60px;
+        right: -20px;
+        width: 100%;
+        /* Relative to .app-visual now */
+        min-width: 280px;
+        /* Guarantee size */
+        max-width: none;
+        height: auto;
+        transform: none;
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-download-container {
+        padding: 40px 20px 0;
+    }
+
+    .app-headline {
+        font-size: 24px;
+    }
+
+    .app-content {
+        max-width: 55%;
+    }
+
+    .phone-mockup {
+        width: 250%;
+        /* Massive on tiny screens */
+        right: -40px;
+        min-width: 300px;
+    }
+}

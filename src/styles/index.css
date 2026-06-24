@@ -1,0 +1,50 @@
+@import './modern-design-system.css';
+
+:root {
+    /* Map legacy variables to new design tokens */
+    --accent-orange: var(--color-primary);
+    --accent-orange-hover: var(--color-primary-hover);
+
+    --border-color: var(--border-light);
+    --bg-banner: #E8F0FE;
+    /* value from before, ideally move to tokens */
+}
+
+/* Base styles are now handled via design-tokens.css variables */
+/* We can keep body styles here utilizing the new tokens */
+
+[data-theme='dark'] {
+    --bg-banner: #1E2A38;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Uber Move Text', system-ui, -apple-system, sans-serif;
+    /* Modern stack if avail, else system */
+}
+
+/* Common utility classes usage */
+.minimal-navbar {
+    background: var(--bg-surface) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.menu-sidebar {
+    background: var(--bg-surface) !important;
+}
+
+.menu-header {
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.menu-header h2,
+.close-btn,
+.menu-link {
+    color: var(--text-main) !important;
+}
+
+.menu-link:hover {
+    background: var(--bg-surface-hover) !important;
+}

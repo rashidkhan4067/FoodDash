@@ -1,0 +1,82 @@
+/* ============================================
+   UI COMPONENT STYLES
+   Additions to Modern Design System
+   ============================================ */
+
+/* --- BUTTON EXTENSIONS --- */
+.btn-gradient {
+    background: var(--gradient-primary);
+    color: var(--text-inverse);
+    border: none;
+    box-shadow: var(--shadow-primary);
+}
+
+.btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    filter: brightness(1.1);
+}
+
+.btn-glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text-secondary);
+}
+
+.btn-ghost:hover {
+    background: var(--bg-surface-hover);
+    color: var(--text-primary);
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+}
+
+/* --- CARD EXTENSIONS --- */
+.card-glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+.card-elevated {
+    background: var(--bg-surface-elevated);
+    box-shadow: var(--shadow-xl);
+    border: none;
+}
+
+.card-interactive {
+    cursor: pointer;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card-interactive:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* --- DECORATIONS & ALERTS --- */
+.bg-blob {
+    position: absolute;
+    filter: blur(80px);
+    opacity: 0.4;
+    z-index: -1;
+    border-radius: 50%;
+}

@@ -1,0 +1,206 @@
+/* YourTime.css */
+
+.your-time-section {
+    padding: 6rem 1rem;
+    background: #fdfbf7;
+    /* Light beige background */
+    overflow: hidden;
+}
+
+.yt-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.yt-header {
+    margin-bottom: 3rem;
+}
+
+.yt-brand {
+    display: block;
+    font-size: 1.1rem;
+    color: #242424;
+    /* Dark grey/black */
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+    font-family: inherit;
+    /* Use main font */
+}
+
+.yt-title {
+    font-size: 3.5rem;
+    color: #ff8000;
+    /* Orange */
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.yt-cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+}
+
+.yt-card {
+    background: #fff;
+    border-radius: 12px;
+    /* Slightly tighter radius */
+    padding: 2.5rem 2rem;
+    width: 340px;
+    text-align: center;
+    /* Center everything by default */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* Softer shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.yt-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.yt-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    /* No background box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.card-icon-svg {
+    width: 64px;
+    height: 64px;
+    stroke: #ff8000;
+    stroke-width: 2;
+    /* Thicker lines */
+}
+
+/* Specific styling for SVGs to match the look */
+.card-icon-svg path {
+    stroke: #ff8000;
+    stroke-width: 2.5;
+    fill: none;
+}
+
+.yt-card-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #242424;
+    margin-bottom: 2rem;
+}
+
+.yt-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    /* List items align left */
+    width: 100%;
+}
+
+.yt-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #4a4a4a;
+    line-height: 1.5;
+}
+
+.check-icon {
+    min-width: 20px;
+    height: 20px;
+    background: transparent;
+    /* No green circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #242424;
+    /* Black checkmark */
+    margin-top: 2px;
+}
+
+.check-icon svg {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2.5;
+    stroke: currentColor;
+}
+
+.list-text a {
+    color: #00509d;
+    /* Link color if any */
+    text-decoration: underline;
+}
+
+/* Mobile-Specific Styles */
+.yt-pagination {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .your-time-section {
+        padding: 4rem 1rem;
+    }
+
+    .yt-title {
+        font-size: 2.5rem;
+    }
+
+    .yt-cards-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding: 1rem 0 2rem;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        padding-left: 5vw;
+        /* Start slightly indented */
+        padding-right: 5vw;
+    }
+
+    .yt-cards-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .yt-card {
+        min-width: 85vw;
+        /* Full width cards on mobile */
+        scroll-snap-align: center;
+        margin-left: 0;
+    }
+
+    .yt-pagination {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 0.5rem;
+    }
+
+    .yt-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #ccc;
+        transition: all 0.3s ease;
+    }
+
+    .yt-dot.active {
+        background: #ff8000;
+    }
+}

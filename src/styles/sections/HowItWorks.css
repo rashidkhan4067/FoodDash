@@ -1,0 +1,175 @@
+/* ============================================
+   HOW IT WORKS SECTION - Responsive Carousel
+   ============================================ */
+
+.how-it-works {
+    width: 100%;
+    background: #ffffff;
+    padding: 60px 0 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.hiw-content-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hiw-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hiw-subtitle {
+    display: block;
+    font-size: 18px;
+    color: #5d666e;
+    margin-bottom: 4px;
+    font-weight: 400;
+}
+
+.hiw-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #FF8000;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.hiw-steps {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+.hiw-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hiw-icon {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hiw-icon svg {
+    width: 64px;
+    height: 64px;
+    stroke: #FF8000;
+    stroke-width: 2;
+}
+
+.hiw-step h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0e1d25;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+.hiw-step p {
+    font-size: 14px;
+    color: #5d666e;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 280px;
+}
+
+.hiw-pagination {
+    display: none;
+    /* Hidden on Desktop */
+}
+
+/* RESPONSIVE CAROUSEL */
+@media (max-width: 900px) {
+    .how-it-works {
+        padding: 40px 0 60px;
+    }
+
+    .hiw-content-wrapper {
+        padding: 0;
+        /* Remove side padding to allow full bleed swipe */
+        overflow: hidden;
+        /* Hide scrollbar */
+    }
+
+    .hiw-header {
+        padding: 0 20px;
+        margin-bottom: 32px;
+    }
+
+    .hiw-title {
+        font-size: 28px;
+    }
+
+    .hiw-steps {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 0;
+        padding-bottom: 20px;
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scroll on iOS */
+        scrollbar-width: none;
+        /* Firefox hide scrollbar */
+    }
+
+    .hiw-steps::-webkit-scrollbar {
+        display: none;
+        /* Chrome/Safari hide scrollbar */
+    }
+
+    .hiw-step {
+        flex: 0 0 100%;
+        /* Show one item at a time */
+        scroll-snap-align: center;
+        padding: 0 20px;
+    }
+
+    .hiw-step p {
+        max-width: 300px;
+        /* Slightly wider on mobile for text reading */
+    }
+
+    /* PAGINATION DOTS */
+    .hiw-pagination {
+        display: flex;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        background-color: #d1d5db;
+        /* Grey */
+        border-radius: 50%;
+        transition: background-color 0.2s ease;
+    }
+
+    .dot.active {
+        background-color: #4b5563;
+        /* Darker Active Grey/Black */
+    }
+
+    /* Specific active color from screenshot seems orange or dark grey. Screenshot shows dark grey left/mid, actually wait.
+       Looking at screenshot 3: Active dot (3rd one) is orange. 
+       Wait, the first screenshot has active dot as first one (grey?), actually the last one is orange.
+       Let's use Orange for active dot to match brand properly. */
+
+    .dot.active {
+        background-color: #FF8000;
+    }
+}

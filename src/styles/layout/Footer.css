@@ -1,0 +1,251 @@
+/* ============================================
+   Just Eat Footer Styles
+   ============================================ */
+
+.footer {
+    background: #fdfbf7;
+    /* Light beige matching screenshot */
+    color: #242424;
+    padding: 2.5rem 1rem;
+    margin-top: auto;
+    font-family: 'Takeaway Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fallbacks */
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* 1. Header */
+.footer-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.footer-brand-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.brand-icon {
+    font-size: 2rem;
+}
+
+.brand-name {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: #242424;
+    font-style: italic;
+    /* Just Eat logo style often italic/bold */
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    color: #242424;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #242424;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #242424;
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* 2. Main Grid Layout */
+.footer-main-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+/* Accordion Styles */
+.accordion-item {
+    margin-bottom: 0.5rem;
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.accordion-header h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 0;
+    color: #242424;
+}
+
+.chevron {
+    font-size: 0.8rem;
+    color: #242424;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease;
+}
+
+.accordion-content.open {
+    max-height: 1000px;
+    /* Large enough to fit content */
+    padding-bottom: 1rem;
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-list li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links-list li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.85rem;
+    display: block;
+    transition: color 0.2s;
+}
+
+.footer-links-list li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Specific Styles for Sections */
+.gray-pane {
+    background: #ebebeb;
+    /* Light grey box for International */
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.gray-pane.open {
+    padding: 1.5rem;
+}
+
+.international-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+/* 3. Bottom Bar */
+.footer-bottom-bar {
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 1.5rem;
+}
+
+.bottom-links-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.bottom-links-row a {
+    color: #555;
+    font-size: 0.75rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.copyright-row {
+    font-size: 0.75rem;
+    color: #242424;
+    margin-bottom: 0.5rem;
+}
+
+.cookie-pref-row a {
+    font-size: 0.75rem;
+    color: #242424;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* ============================================
+   DESKTOP STYLES (Min-width: 1024px)
+   ============================================ */
+@media (min-width: 1024px) {
+    .footer-main-grid {
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    .footer-col-left {
+        width: 250px;
+        flex-shrink: 0;
+    }
+
+    .footer-col-right {
+        flex-grow: 1;
+    }
+
+    /* Just Eat Column specific desktop override */
+    .no-border-desktop .accordion-header {
+        padding-top: 0;
+        /* Often Just Eat header is static or collapsible on desktop. 
+           Mockup shows chevron ^ so it IS collapsible. Styles stay same. */
+    }
+
+    /* International Grid Layout */
+    .international-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid #ccc;
+    }
+
+    /* Keep borders for right side categories except International which has grey box */
+
+
+    .international-section {
+        margin-bottom: 2rem;
+    }
+}
